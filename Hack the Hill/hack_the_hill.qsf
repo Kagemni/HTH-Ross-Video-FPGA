@@ -405,7 +405,6 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/video_uut.sv
 set_global_assignment -name QIP_FILE probes/synthesis/probes.qip
 set_global_assignment -name SYSTEMVERILOG_FILE rtl_Ross/ultrix_iob_enc.sv
@@ -448,4 +447,5 @@ set_global_assignment -name SDC_FILE fpga_bot.sdc
 set_global_assignment -name SOURCE_FILE db/hack_the_hill.cmp.rdb
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SOURCE_FILE output_files/Spf1.spf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
