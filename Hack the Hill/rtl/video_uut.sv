@@ -55,22 +55,46 @@ reg [19:0]  vid_d1;
 reg [3:0]   fvht_d1;
 logic       alternate;
 int 			y, u, v;
+int			y1, u1, v1;
+int			xCount, yCount;
 
 initial begin
 	alternate = 1'b0;
 	YUVfromRGB(255, 0, 0, y, u, v);
+	YUVfromRGB(0, 0, 255, y1, u1, v1);
+	xCount = 0;
+	yCount = 0;
 end
 
 always @(posedge clk_i) begin
     if(cen_i) begin
+			if (fvht_i[0] || fvht_i[1]) begin
+				//reached the end. reset counters
+				xCount = 0;
+				yCount = 0;
+			end else begin
+				xCount++;
+				yCount++;
+			end
+			
+			//draw
 			if (alternate) begin
-        //vid_d1  <= (vid_sel_i)? vdat_colour_i : vdat_bars_i;
-				vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y, u, v, 1'b0);
+				if (xCount % 500 < 250) begin
+					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y, u, v, 1'b0);
+				end else begin
+					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y1, u1, v1, 1'b0);
+				end
+				
 				alternate = 1'b0;
 			end else begin
-				vid_d1  <= (vid_sel_i)? vdat_colour_i : YUVtoData(y, u, v, 1'b1);
+				if (xCount % 500 < 250) begin
+					vid_d1  <= (vid_sel_i)? vdat_colour_i : YUVtoData(y, u, v, 1'b1);
+				end else begin
+					vid_d1  <= (vid_sel_i)? vdat_colour_i : YUVtoData(y1, u1, v1, 1'b1);
+				end
 				alternate = 1'b1;
 			end
+		
 			
        fvht_d1 <= fvht_i;
     end
