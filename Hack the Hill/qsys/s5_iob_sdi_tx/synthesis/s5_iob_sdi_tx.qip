@@ -1,0 +1,193 @@
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_TOOL_VERSION "20.1"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "s5_iob_sdi_tx" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../cores/s5_iob_sdi_tx.sopcinfo"]
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name SLD_INFO "QSYS_NAME s5_iob_sdi_tx HAS_SOPCINFO 1 GENERATION_ID 1725487983"
+set_global_assignment -library "s5_iob_sdi_tx" -name MISC_FILE [file join $::quartus(qip_path) "../s5_iob_sdi_tx.cmp"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SLD_FILE [file join $::quartus(qip_path) "s5_iob_sdi_tx.debuginfo"]
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_TARGETED_DEVICE_FAMILY "Arria V GZ"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_GENERATED_DEVICE_FAMILY "{Arria V GZ}"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_QSYS_MODE "SYSTEM"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "s5_iob_sdi_tx" -name MISC_FILE [file join $::quartus(qip_path) "../../../cores/s5_iob_sdi_tx.qsys"]
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_NAME "czVfaW9iX3NkaV90eA=="
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_DISPLAY_NAME "czVfaW9iX3NkaV90eA=="
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTcyNTQ4Nzk4Mw==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::QXJyaWEgViBHWg==::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUFHWk1FM0gyRjM1QzM=::QXV0byBERVZJQ0U="
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::M19IMg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19UWF9DTE9DS19DTE9DS19SQVRF::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19UWF9DTE9DS19DTE9DS19ET01BSU4=::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "s5_iob_sdi_tx" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "QVVUT19UWF9DTE9DS19SRVNFVF9ET01BSU4=::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_NAME "YWx0ZXJhX3hjdnJfcmVzZXRfY29udHJvbA=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_DISPLAY_NAME "VHJhbnNjZWl2ZXIgUEhZIFJlc2V0IENvbnRyb2xsZXI="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_VERSION "MjAuMQ=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZGV2aWNlX2ZhbWlseQ==::QXJyaWEgViBHWg==::ZGV2aWNlX2ZhbWlseQ=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Q0hBTk5FTFM=::MQ==::TnVtYmVyIG9mIHRyYW5zY2VpdmVyIGNoYW5uZWxz"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "UExMUw==::MQ==::TnVtYmVyIG9mIFRYIFBMTHM="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "U1lTX0NMS19JTl9NSFo=::MTI1::SW5wdXQgY2xvY2sgZnJlcXVlbmN5"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "U1lOQ0hST05JWkVfUkVTRVQ=::MQ==::U3luY2hyb25pemUgcmVzZXQgaW5wdXQ="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "UkVEVUNFRF9TSU1fVElNRQ==::MQ==::VXNlIGZhc3QgcmVzZXQgZm9yIHNpbXVsYXRpb24="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3NwbGl0X2ludGVyZmFjZXM=::MA==::U2VwYXJhdGUgaW50ZXJmYWNlIHBlciBjaGFubmVsL1BMTA=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "VFhfUExMX0VOQUJMRQ==::MA==::RW5hYmxlIFRYIFBMTCByZXNldCBjb250cm9s"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "VFhfRU5BQkxF::MQ==::RW5hYmxlIFRYIGNoYW5uZWwgcmVzZXQgY29udHJvbA=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "VFhfUEVSX0NIQU5ORUw=::MA==::VXNlIHNlcGFyYXRlIFRYIHJlc2V0IHBlciBjaGFubmVs"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3R4X2F1dG9fcmVzZXQ=::MA==::VFggZGlnaXRhbCByZXNldCBtb2Rl"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "VF9UWF9BTkFMT0dSRVNFVA==::MA==::dHhfYW5hbG9ncmVzZXQgZHVyYXRpb24="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "VF9UWF9ESUdJVEFMUkVTRVQ=::MjA=::dHhfZGlnaXRhbHJlc2V0IGR1cmF0aW9u"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "VF9QTExfTE9DS19IWVNU::MA==::cGxsX2xvY2tlZCBpbnB1dCBoeXN0ZXJlc2lz"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF9jYWxfYnVzeQ==::MA==::RW5hYmxlIHBsbF9jYWxfYnVzeSBpbnB1dCBwb3J0"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "RU5fUExMX0NBTF9CVVNZ::MA==::RU5fUExMX0NBTF9CVVNZ"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "UlhfRU5BQkxF::MA==::RW5hYmxlIFJYIGNoYW5uZWwgcmVzZXQgY29udHJvbA=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF90ZXJtaW5hdGVfcGxs::MQ==::bF90ZXJtaW5hdGVfcGxs"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF90ZXJtaW5hdGVfdHg=::MA==::bF90ZXJtaW5hdGVfdHg="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF90ZXJtaW5hdGVfcng=::MQ==::bF90ZXJtaW5hdGVfcng="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF90ZXJtaW5hdGVfdHhfbWFudWFs::MQ==::bF90ZXJtaW5hdGVfdHhfbWFudWFs"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF90ZXJtaW5hdGVfcnhfbWFudWFs::MQ==::bF90ZXJtaW5hdGVfcnhfbWFudWFs"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF90eF9tYW51YWxfdGVybQ==::MA==::bF90eF9tYW51YWxfdGVybQ=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9yeF9tYW51YWxfdGVybQ==::MA==::bF9yeF9tYW51YWxfdGVybQ=="
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9wbGxfc2VsZWN0X3NwbGl0::MA==::bF9wbGxfc2VsZWN0X3NwbGl0"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9wbGxfc2VsZWN0X3dpZHRo::MQ==::bF9wbGxfc2VsZWN0X3dpZHRo"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9wbGxfc2VsZWN0X2Jhc2U=::MQ==::bF9wbGxfc2VsZWN0X2Jhc2U="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_NAME "YWx0ZXJhX3hjdnJfbmF0aXZlX3N2"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_DISPLAY_NAME "QXJyaWEgViBHWiBUcmFuc2NlaXZlciBOYXRpdmUgUEhZIEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_VERSION "MTkuMQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZGV2aWNlX2ZhbWlseQ==::QXJyaWEgViBHWg==::ZGV2aWNlX2ZhbWlseQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZGV2aWNlX3NwZWVkZ3JhZGU=::ZmFzdGVzdA==::RGV2aWNlIHNwZWVkIGdyYWRl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bWVzc2FnZV9sZXZlbA==::ZXJyb3I=::TWVzc2FnZSBsZXZlbCBmb3IgcnVsZSB2aW9sYXRpb25z"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dHhfZW5hYmxl::MQ==::RW5hYmxlIFRYIGRhdGFwYXRo"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cnhfZW5hYmxl::MA==::RW5hYmxlIFJYIGRhdGFwYXRo"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3N0ZA==::MA==::RW5hYmxlIFN0YW5kYXJkIFBDUw=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3Rlbmc=::MQ==::RW5hYmxlIDEwRyBQQ1M="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZGF0YV9wYXRoX3NlbGVjdA==::MTBH::ZGF0YV9wYXRoX3NlbGVjdA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Y2hhbm5lbHM=::MQ==::TnVtYmVyIG9mIGRhdGEgY2hhbm5lbHM="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Ym9uZGVkX21vZGU=::bm9uX2JvbmRlZA==::Qm9uZGluZyBtb2Rl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3NpbXBsZV9pbnRlcmZhY2U=::MA==::RW5hYmxlIHNpbXBsaWZpZWQgZGF0YSBpbnRlcmZhY2U="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "c2V0X2RhdGFfcmF0ZQ==::MTE4ODA=::RGF0YSByYXRl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZGF0YV9yYXRl::MTE4ODAgTWJwcw==::ZGF0YV9yYXRl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cG1hX3dpZHRo::NDA=::UENTIC8gUE1BIGludGVyZmFjZSB3aWR0aA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cG1hX2RpcmVjdF93aWR0aA==::NDA=::UE1BIGRpcmVjdCBpbnRlcmZhY2Ugd2lkdGg="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dHhfcG1hX2Nsa19kaXY=::MQ==::VFggbG9jYWwgY2xvY2sgZGl2aXNpb24gZmFjdG9y"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dHhfcG1hX3R4ZGV0ZWN0cnhfY3RybA==::MA==::RW5hYmxlIFFQSSBwb3J0cw=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "YmFzZV9kYXRhX3JhdGU=::MTE4ODA=::VFggUExMIGJhc2UgZGF0YSByYXRl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX3JlY29uZmlnX2VuYWJsZQ==::MA==::RW5hYmxlIFRYIFBMTCBkeW5hbWljIHJlY29uZmlndXJhdGlvbg=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX2V4dGVybmFsX2VuYWJsZQ==::MA==::VXNlIGV4dGVybmFsIFRYIFBMTA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX2RhdGFfcmF0ZQ==::MTE4ODAgTWJwcw==::cGxsX2RhdGFfcmF0ZQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX3R5cGU=::QVRY::cGxsX3R5cGU="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX25ldHdvcmtfc2VsZWN0::eDE=::cGxsX25ldHdvcmtfc2VsZWN0"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxscw==::MQ==::TnVtYmVyIG9mIFRYIFBMTHM="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX3NlbGVjdA==::MA==::TWFpbiBUWCBQTEwgbG9naWNhbCBpbmRleA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX3JlZmNsa19jbnQ=::MQ==::TnVtYmVyIG9mIFRYIFBMTCByZWZlcmVuY2UgY2xvY2tz"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX3JlZmNsa19zZWxlY3Q=::MA==::cGxsX3JlZmNsa19zZWxlY3Q="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX3JlZmNsa19mcmVx::MTQ4LjUgTUh6::cGxsX3JlZmNsa19mcmVx"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "cGxsX2ZlZWRiYWNrX3BhdGg=::aW50ZXJuYWw=::cGxsX2ZlZWRiYWNrX3BhdGg="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF9yZWNvbmZpZ19wbGwwX3BsbF90eXBl::QVRY::UExMIHR5cGU="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF9yZWNvbmZpZ19wbGwwX2RhdGFfcmF0ZV9kZXI=::MTE4ODAgTWJwcw==::UExMIGJhc2UgZGF0YSByYXRl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF9yZWNvbmZpZ19wbGwwX3JlZmNsa19mcmVx::MTQ4LjUgTUh6::UmVmZXJlbmNlIGNsb2NrIGZyZXF1ZW5jeQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF9yZWNvbmZpZ19wbGwwX3JlZmNsa19zZWw=::MA==::U2VsZWN0ZWQgcmVmZXJlbmNlIGNsb2NrIHNvdXJjZQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "Z3VpX3BsbF9yZWNvbmZpZ19wbGwwX2Nsa19uZXR3b3Jr::eDE=::U2VsZWN0ZWQgY2xvY2sgbmV0d29yaw=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfcG1hX3FwaXB1bGx1cA==::MA==::RW5hYmxlIHR4X3BtYV9xcGlwdWxsdXAgcG9ydCAoUVBJKQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfcG1hX3FwaXB1bGxkbg==::MA==::RW5hYmxlIHR4X3BtYV9xcGlwdWxsZG4gcG9ydCAoUVBJKQ=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfcG1hX3R4ZGV0ZWN0cng=::MA==::RW5hYmxlIHR4X3BtYV90eGRldGVjdHJ4IHBvcnQgKFFQSSk="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfcG1hX3J4Zm91bmQ=::MA==::RW5hYmxlIHR4X3BtYV9yeGZvdW5kIHBvcnQgKFFQSSk="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfcG1hX3BjbGs=::MA==::RW5hYmxlIHR4X3BtYV9wY2xrIHBvcnQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ19wcm90b2NvbF9oaW50::YmFzaWM=::MTBHIFBDUyBwcm90b2NvbCBtb2Rl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ19wY3NfcG1hX3dpZHRo::NDA=::MTBHIFBDUyAvIFBNQSBpbnRlcmZhY2Ugd2lkdGg="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ19wbGRfcGNzX3dpZHRo::NDA=::RlBHQSBmYWJyaWMgLyAxMEcgUENTIGludGVyZmFjZSB3aWR0aA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eGZpZm9fbW9kZQ==::cGhhc2VfY29tcA==::VFggRklGTyBtb2Rl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eGZpZm9fZnVsbA==::MzE=::VFggRklGTyBmdWxsIHRocmVzaG9sZA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eGZpZm9fZW1wdHk=::MA==::VFggRklGTyBlbXB0eSB0aHJlc2hvbGQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eGZpZm9fcGZ1bGw=::MjM=::VFggRklGTyBwYXJ0aWFsbHkgZnVsbCB0aHJlc2hvbGQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eGZpZm9fcGVtcHR5::Mg==::VFggRklGTyBwYXJ0aWFsbHkgZW1wdHkgdGhyZXNob2xk"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZpZm9fZnVsbA==::MA==::RW5hYmxlIHR4XzEwZ19maWZvX2Z1bGwgcG9ydA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZpZm9fcGZ1bGw=::MA==::RW5hYmxlIHR4XzEwZ19maWZvX3BmdWxsIHBvcnQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZpZm9fZW1wdHk=::MA==::RW5hYmxlIHR4XzEwZ19maWZvX2VtcHR5IHBvcnQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZpZm9fcGVtcHR5::MA==::RW5hYmxlIHR4XzEwZ19maWZvX3BlbXB0eSBwb3J0"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZpZm9fZGVs::MA==::RW5hYmxlIHR4XzEwZ19maWZvX2RlbCBwb3J0ICgxMEdCQVNFLVIp"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZpZm9faW5zZXJ0::MA==::RW5hYmxlIHR4XzEwZ19maWZvX2luc2VydCBwb3J0ICgxMEdCQVNFLVIp"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9mcm1nZW5fZW5hYmxl::MA==::dGVuZ190eF9mcm1nZW5fZW5hYmxl"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZyYW1l::MA==::RW5hYmxlIHR4XzEwZ19mcmFtZSBwb3J0"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZyYW1lX2RpYWdfc3RhdHVz::MA==::RW5hYmxlIHR4XzEwZ19mcmFtZV9kaWFnX3N0YXR1cyBwb3J0"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2ZyYW1lX2J1cnN0X2Vu::MA==::RW5hYmxlIHR4XzEwZ19mcmFtZV9idXJzdF9lbiBwb3J0"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9zaF9lcnI=::MA==::RW5hYmxlIFRYIHN5bmMgaGVhZGVyIGVycm9yIGluc2VydGlvbg=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9jcmNnZW5fZW5hYmxl::MA==::RW5hYmxlIEludGVybGFrZW4gVFggQ1JDLTMyIGdlbmVyYXRvcg=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF82NGI2NmJfZW5hYmxl::MA==::RW5hYmxlIFRYIDY0Yi82NmIgZW5jb2Rlcg=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9zY3JhbV9lbmFibGU=::MA==::RW5hYmxlIFRYIHNjcmFtYmxlciAoMTBHQkFTRS1SL0ludGVybGFrZW4p"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9kaXNwZ2VuX2VuYWJsZQ==::MA==::RW5hYmxlIEludGVybGFrZW4gVFggZGlzcGFyaXR5IGdlbmVyYXRvcg=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9wb2xpbnZfZW5hYmxl::MA==::RW5hYmxlIFRYIGRhdGEgcG9sYXJpdHkgaW52ZXJzaW9u"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "dGVuZ190eF9iaXRzbGlwX2VuYWJsZQ==::MA==::RW5hYmxlIFRYIGRhdGEgYml0c2xpcA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "ZW5hYmxlX3BvcnRfdHhfMTBnX2JpdHNsaXA=::MA==::RW5hYmxlIHR4XzEwZ19iaXRzbGlwIHBvcnQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9wbGxfc2V0dGluZ3M=::MA==::bF9wbGxfc2V0dGluZ3M="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfdHhfcG1hX2RpcmVjdA==::MA==::bF9lbmFibGVfdHhfcG1hX2RpcmVjdA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfcnhfcG1hX2RpcmVjdA==::MA==::bF9lbmFibGVfcnhfcG1hX2RpcmVjdA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfdHhfc3Rk::MA==::bF9lbmFibGVfdHhfc3Rk"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfcnhfc3Rk::MA==::bF9lbmFibGVfcnhfc3Rk"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfcnhfc3RkX3dvcmRfYWxpZ25lcg==::MA==::bF9lbmFibGVfcnhfc3RkX3dvcmRfYWxpZ25lcg=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfdHhfdGVuZw==::MQ==::bF9lbmFibGVfdHhfdGVuZw=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9lbmFibGVfcnhfdGVuZw==::MA==::bF9lbmFibGVfcnhfdGVuZw=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9uZXRsaXN0X3BsbHM=::MQ==::bF9uZXRsaXN0X3BsbHM="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9yY2ZnX2ludGVyZmFjZXM=::Mg==::bF9yY2ZnX2ludGVyZmFjZXM="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9yY2ZnX3RvX3hjdnJfd2lkdGg=::MTQw::bF9yY2ZnX3RvX3hjdnJfd2lkdGg="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9yY2ZnX2Zyb21feGN2cl93aWR0aA==::OTI=::bF9yY2ZnX2Zyb21feGN2cl93aWR0aA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9wbWFfZGlyZWN0X3dvcmRfY291bnQ=::NA==::bF9wbWFfZGlyZWN0X3dvcmRfY291bnQ="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9wbWFfZGlyZWN0X3dvcmRfd2lkdGg=::MTA=::bF9wbWFfZGlyZWN0X3dvcmRfd2lkdGg="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9zdGRfdHhfd29yZF9jb3VudA==::MQ==::bF9zdGRfdHhfd29yZF9jb3VudA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9zdGRfdHhfd29yZF93aWR0aA==::MTA=::bF9zdGRfdHhfd29yZF93aWR0aA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9zdGRfdHhfZmllbGRfd2lkdGg=::MTE=::bF9zdGRfdHhfZmllbGRfd2lkdGg="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9zdGRfcnhfd29yZF9jb3VudA==::MQ==::bF9zdGRfcnhfd29yZF9jb3VudA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9zdGRfcnhfd29yZF93aWR0aA==::MTA=::bF9zdGRfcnhfd29yZF93aWR0aA=="
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_COMPONENT_PARAMETER "bF9zdGRfcnhfZmllbGRfd2lkdGg=::MTY=::bF9zdGRfcnhfZmllbGRfd2lkdGg="
+
+set_global_assignment -library "s5_iob_sdi_tx" -name VERILOG_FILE [file join $::quartus(qip_path) "s5_iob_sdi_tx.v"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_xcvr_functions.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/alt_xcvr_resync.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_xcvr_reset_control.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/alt_xcvr_reset_counter.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/plain_files.txt"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_pcs.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_pcs_ch.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_pma.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_reconfig_bundle_to_xcvr.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_reconfig_bundle_to_ip.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_reconfig_bundle_merger.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_rx_pma.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_tx_pma.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_tx_pma_ch.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_h.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_avmm_csr.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_avmm_dcd.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_avmm.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_data_adapter.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_native.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_xcvr_plls.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_10g_rx_pcs_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_10g_tx_pcs_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_8g_rx_pcs_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_8g_tx_pcs_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_8g_pcs_aggregate_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_common_pcs_pma_interface_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_common_pld_pcs_interface_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_pipe_gen1_2_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_pipe_gen3_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_rx_pcs_pma_interface_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_rx_pld_pcs_interface_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_tx_pcs_pma_interface_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/sv_hssi_tx_pld_pcs_interface_rbc.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_xcvr_native_sv_functions_h.sv"]
+set_global_assignment -library "s5_iob_sdi_tx" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_xcvr_native_sv.sv"]
+
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_TOOL_NAME "altera_xcvr_reset_control"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_TOOL_VERSION "20.1"
+set_global_assignment -entity "altera_xcvr_reset_control" -library "s5_iob_sdi_tx" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_TOOL_NAME "altera_xcvr_native_avgz"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_TOOL_VERSION "19.1"
+set_global_assignment -entity "altera_xcvr_native_sv" -library "s5_iob_sdi_tx" -name IP_TOOL_ENV "Qsys"

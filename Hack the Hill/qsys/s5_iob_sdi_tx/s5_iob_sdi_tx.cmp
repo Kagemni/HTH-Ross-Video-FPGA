@@ -1,0 +1,19 @@
+	component s5_iob_sdi_tx is
+		port (
+			pll_powerdown_pll_powerdown           : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- pll_powerdown
+			pll_select_pll_select                 : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- pll_select
+			reconfig_from_xcvr_reconfig_from_xcvr : out std_logic_vector(91 downto 0);                     -- reconfig_from_xcvr
+			reconfig_to_xcvr_reconfig_to_xcvr     : in  std_logic_vector(139 downto 0) := (others => 'X'); -- reconfig_to_xcvr
+			tx_10g_clkout_tx_10g_clkout           : out std_logic_vector(0 downto 0);                      -- tx_10g_clkout
+			tx_10g_control_tx_10g_control         : in  std_logic_vector(8 downto 0)   := (others => 'X'); -- tx_10g_control
+			tx_10g_coreclkin_tx_10g_coreclkin     : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- tx_10g_coreclkin
+			tx_10g_data_valid_tx_10g_data_valid   : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- tx_10g_data_valid
+			tx_clock_clk                          : in  std_logic                      := 'X';             -- clk
+			tx_parallel_data_tx_parallel_data     : in  std_logic_vector(63 downto 0)  := (others => 'X'); -- tx_parallel_data
+			tx_pll_refclk_tx_pll_refclk           : in  std_logic_vector(0 downto 0)   := (others => 'X'); -- tx_pll_refclk
+			tx_ready_tx_ready                     : out std_logic_vector(0 downto 0);                      -- tx_ready
+			tx_reset_reset                        : in  std_logic                      := 'X';             -- reset
+			tx_serial_data_tx_serial_data         : out std_logic_vector(0 downto 0)                       -- tx_serial_data
+		);
+	end component s5_iob_sdi_tx;
+

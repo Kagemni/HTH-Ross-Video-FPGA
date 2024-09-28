@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element xcvr_native_avgz_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element xcvr_reset_control_tx
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5AGZME3H2F35C3" />
+ <parameter name="deviceFamily" value="Arria V GZ" />
+ <parameter name="deviceSpeedGrade" value="3_H2" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="pll_powerdown"
+   internal="xcvr_native_avgz_0.pll_powerdown"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pll_select"
+   internal="xcvr_reset_control_tx.pll_select"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="reconfig_from_xcvr"
+   internal="xcvr_native_avgz_0.reconfig_from_xcvr"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="reconfig_to_xcvr"
+   internal="xcvr_native_avgz_0.reconfig_to_xcvr"
+   type="conduit"
+   dir="end" />
+ <interface name="rx_10g_clkout" internal="xcvr_native_avgz_0.rx_10g_clkout" />
+ <interface name="rx_10g_control" internal="xcvr_native_avgz_0.rx_10g_control" />
+ <interface
+   name="rx_10g_coreclkin"
+   internal="xcvr_native_avgz_0.rx_10g_coreclkin" />
+ <interface
+   name="rx_10g_prbs_done"
+   internal="xcvr_native_avgz_0.rx_10g_prbs_done" />
+ <interface name="rx_10g_prbs_err" internal="xcvr_native_avgz_0.rx_10g_prbs_err" />
+ <interface
+   name="rx_10g_prbs_err_clr"
+   internal="xcvr_native_avgz_0.rx_10g_prbs_err_clr" />
+ <interface name="rx_cdr_refclk" internal="xcvr_native_avgz_0.rx_cdr_refclk" />
+ <interface name="rx_clkslip" internal="xcvr_native_avgz_0.rx_clkslip" />
+ <interface
+   name="rx_is_lockedtoref"
+   internal="xcvr_native_avgz_0.rx_is_lockedtoref" />
+ <interface
+   name="rx_parallel_data"
+   internal="xcvr_native_avgz_0.rx_parallel_data" />
+ <interface name="rx_pma_clkout" internal="xcvr_native_avgz_0.rx_pma_clkout" />
+ <interface
+   name="rx_pma_parallel_data"
+   internal="xcvr_native_avgz_0.rx_pma_parallel_data" />
+ <interface name="rx_serial_data" internal="xcvr_native_avgz_0.rx_serial_data" />
+ <interface name="rx_seriallpbken" internal="xcvr_native_avgz_0.rx_seriallpbken" />
+ <interface
+   name="rx_set_locktodata"
+   internal="xcvr_native_avgz_0.rx_set_locktodata" />
+ <interface
+   name="rx_set_locktoref"
+   internal="xcvr_native_avgz_0.rx_set_locktoref" />
+ <interface
+   name="tx_10g_clkout"
+   internal="xcvr_native_avgz_0.tx_10g_clkout"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="tx_10g_control"
+   internal="xcvr_native_avgz_0.tx_10g_control"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="tx_10g_coreclkin"
+   internal="xcvr_native_avgz_0.tx_10g_coreclkin"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="tx_10g_data_valid"
+   internal="xcvr_native_avgz_0.tx_10g_data_valid"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="tx_clock"
+   internal="xcvr_reset_control_tx.clock"
+   type="clock"
+   dir="end" />
+ <interface
+   name="tx_parallel_data"
+   internal="xcvr_native_avgz_0.tx_parallel_data"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="tx_pll_refclk"
+   internal="xcvr_native_avgz_0.tx_pll_refclk"
+   type="conduit"
+   dir="end" />
+ <interface name="tx_pma_clkout" internal="xcvr_native_avgz_0.tx_pma_clkout" />
+ <interface
+   name="tx_pma_parallel_data"
+   internal="xcvr_native_avgz_0.tx_pma_parallel_data" />
+ <interface
+   name="tx_ready"
+   internal="xcvr_reset_control_tx.tx_ready"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="tx_reset"
+   internal="xcvr_reset_control_tx.reset"
+   type="reset"
+   dir="end" />
+ <interface
+   name="tx_serial_data"
+   internal="xcvr_native_avgz_0.tx_serial_data"
+   type="conduit"
+   dir="end" />
+ <module
+   name="xcvr_native_avgz_0"
+   kind="altera_xcvr_native_avgz"
+   version="17.0"
+   enabled="1">
+  <parameter name="bonded_mode" value="non_bonded" />
+  <parameter name="cdr_reconfig_enable" value="0" />
+  <parameter name="cdr_refclk_cnt" value="1" />
+  <parameter name="cdr_refclk_select" value="0" />
+  <parameter name="channels" value="1" />
+  <parameter name="device_family" value="Arria V GZ" />
+  <parameter name="device_speedgrade" value="fastest" />
+  <parameter name="enable_port_rx_10g_bitslip" value="0" />
+  <parameter name="enable_port_rx_10g_blk_lock" value="0" />
+  <parameter name="enable_port_rx_10g_blk_sh_err" value="0" />
+  <parameter name="enable_port_rx_10g_clk33out" value="0" />
+  <parameter name="enable_port_rx_10g_clr_errblk_count" value="0" />
+  <parameter name="enable_port_rx_10g_crc32_err" value="0" />
+  <parameter name="enable_port_rx_10g_data_valid" value="0" />
+  <parameter name="enable_port_rx_10g_descram_err" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_align_clr" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_align_en" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_align_val" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_del" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_empty" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_full" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_insert" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_pempty" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_pfull" value="0" />
+  <parameter name="enable_port_rx_10g_fifo_rd_en" value="0" />
+  <parameter name="enable_port_rx_10g_frame" value="0" />
+  <parameter name="enable_port_rx_10g_frame_diag_err" value="0" />
+  <parameter name="enable_port_rx_10g_frame_diag_status" value="0" />
+  <parameter name="enable_port_rx_10g_frame_lock" value="0" />
+  <parameter name="enable_port_rx_10g_frame_mfrm_err" value="0" />
+  <parameter name="enable_port_rx_10g_frame_pyld_ins" value="0" />
+  <parameter name="enable_port_rx_10g_frame_skip_err" value="0" />
+  <parameter name="enable_port_rx_10g_frame_skip_ins" value="0" />
+  <parameter name="enable_port_rx_10g_frame_sync_err" value="0" />
+  <parameter name="enable_port_rx_10g_highber" value="0" />
+  <parameter name="enable_port_rx_10g_highber_clr_cnt" value="0" />
+  <parameter name="enable_port_rx_is_lockedtodata" value="1" />
+  <parameter name="enable_port_rx_is_lockedtoref" value="0" />
+  <parameter name="enable_port_rx_pma_clkout" value="1" />
+  <parameter name="enable_port_rx_pma_pclk" value="0" />
+  <parameter name="enable_port_rx_pma_qpipulldn" value="0" />
+  <parameter name="enable_port_rx_seriallpbken" value="1" />
+  <parameter name="enable_port_rx_signaldetect" value="0" />
+  <parameter name="enable_port_rx_std_bitrev_ena" value="0" />
+  <parameter name="enable_port_rx_std_bitslip" value="0" />
+  <parameter name="enable_port_rx_std_bitslipboundarysel" value="0" />
+  <parameter name="enable_port_rx_std_byteorder_ena" value="0" />
+  <parameter name="enable_port_rx_std_byteorder_flag" value="0" />
+  <parameter name="enable_port_rx_std_byterev_ena" value="0" />
+  <parameter name="enable_port_rx_std_pcfifo_empty" value="0" />
+  <parameter name="enable_port_rx_std_pcfifo_full" value="0" />
+  <parameter name="enable_port_rx_std_polinv" value="0" />
+  <parameter name="enable_port_rx_std_prbs_status" value="0" />
+  <parameter name="enable_port_rx_std_rmfifo_empty" value="0" />
+  <parameter name="enable_port_rx_std_rmfifo_full" value="0" />
+  <parameter name="enable_port_rx_std_runlength_err" value="0" />
+  <parameter name="enable_port_rx_std_signaldetect" value="0" />
+  <parameter name="enable_port_rx_std_wa_a1a2size" value="0" />
+  <parameter name="enable_port_rx_std_wa_patternalign" value="0" />
+  <parameter name="enable_port_rx_teng_prbs_status" value="1" />
+  <parameter name="enable_port_tx_10g_bitslip" value="0" />
+  <parameter name="enable_port_tx_10g_fifo_del" value="0" />
+  <parameter name="enable_port_tx_10g_fifo_empty" value="0" />
+  <parameter name="enable_port_tx_10g_fifo_full" value="0" />
+  <parameter name="enable_port_tx_10g_fifo_insert" value="0" />
+  <parameter name="enable_port_tx_10g_fifo_pempty" value="0" />
+  <parameter name="enable_port_tx_10g_fifo_pfull" value="0" />
+  <parameter name="enable_port_tx_10g_frame" value="0" />
+  <parameter name="enable_port_tx_10g_frame_burst_en" value="0" />
+  <parameter name="enable_port_tx_10g_frame_diag_status" value="0" />
+  <parameter name="enable_port_tx_pma_pclk" value="0" />
+  <parameter name="enable_port_tx_pma_qpipulldn" value="0" />
+  <parameter name="enable_port_tx_pma_qpipullup" value="0" />
+  <parameter name="enable_port_tx_pma_rxfound" value="0" />
+  <parameter name="enable_port_tx_pma_txdetectrx" value="0" />
+  <parameter name="enable_port_tx_std_bitslipboundarysel" value="0" />
+  <parameter name="enable_port_tx_std_elecidle" value="0" />
+  <parameter name="enable_port_tx_std_pcfifo_empty" value="0" />
+  <parameter name="enable_port_tx_std_pcfifo_full" value="0" />
+  <parameter name="enable_port_tx_std_polinv" value="0" />
+  <parameter name="enable_ports_rx_manual_cdr_mode" value="0" />
+  <parameter name="enable_simple_interface" value="0" />
+  <parameter name="enable_std" value="0" />
+  <parameter name="enable_teng" value="1" />
+  <parameter name="gui_pll_reconfig_pll0_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll0_data_rate" value="1250 Mbps" />
+  <parameter name="gui_pll_reconfig_pll0_pll_type" value="ATX" />
+  <parameter name="gui_pll_reconfig_pll0_refclk_freq" value="148.5 MHz" />
+  <parameter name="gui_pll_reconfig_pll0_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll1_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll1_data_rate" value="1250 Mbps" />
+  <parameter name="gui_pll_reconfig_pll1_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll1_refclk_freq" value="125.0 MHz" />
+  <parameter name="gui_pll_reconfig_pll1_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll2_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll2_data_rate" value="1250 Mbps" />
+  <parameter name="gui_pll_reconfig_pll2_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll2_refclk_freq" value="125.0 MHz" />
+  <parameter name="gui_pll_reconfig_pll2_refclk_sel" value="0" />
+  <parameter name="gui_pll_reconfig_pll3_clk_network" value="x1" />
+  <parameter name="gui_pll_reconfig_pll3_data_rate" value="1250 Mbps" />
+  <parameter name="gui_pll_reconfig_pll3_pll_type" value="CMU" />
+  <parameter name="gui_pll_reconfig_pll3_refclk_freq" value="125.0 MHz" />
+  <parameter name="gui_pll_reconfig_pll3_refclk_sel" value="0" />
+  <parameter name="message_level" value="error" />
+  <parameter name="pll_external_enable" value="0" />
+  <parameter name="pll_reconfig_enable" value="0" />
+  <parameter name="pll_refclk_cnt" value="1" />
+  <parameter name="pll_select" value="0" />
+  <parameter name="plls" value="1" />
+  <parameter name="pma_direct_width" value="40" />
+  <parameter name="rx_clkslip_enable" value="1" />
+  <parameter name="rx_enable" value="0" />
+  <parameter name="rx_ppm_detect_threshold" value="1000" />
+  <parameter name="set_cdr_refclk_freq" value="148.5 MHz" />
+  <parameter name="set_data_path_select" value="standard" />
+  <parameter name="set_data_rate" value="11880" />
+  <parameter name="show_advanced_features" value="0" />
+  <parameter name="std_low_latency_bypass_enable" value="0" />
+  <parameter name="std_pcs_pma_width" value="10" />
+  <parameter name="std_protocol_hint" value="basic" />
+  <parameter name="std_rx_8b10b_enable" value="0" />
+  <parameter name="std_rx_bitrev_enable" value="0" />
+  <parameter name="std_rx_byte_deser_enable" value="0" />
+  <parameter name="std_rx_byte_order_enable" value="0" />
+  <parameter name="std_rx_byte_order_mode" value="manual" />
+  <parameter name="std_rx_byte_order_pad" value="0" />
+  <parameter name="std_rx_byte_order_pattern" value="0" />
+  <parameter name="std_rx_byte_order_symbol_count" value="1" />
+  <parameter name="std_rx_byterev_enable" value="0" />
+  <parameter name="std_rx_pcfifo_mode" value="low_latency" />
+  <parameter name="std_rx_polinv_enable" value="0" />
+  <parameter name="std_rx_rmfifo_enable" value="0" />
+  <parameter name="std_rx_rmfifo_pattern_n" value="00000" />
+  <parameter name="std_rx_rmfifo_pattern_p" value="00000" />
+  <parameter name="std_rx_run_length_val" value="31" />
+  <parameter name="std_rx_word_aligner_mode" value="bit_slip" />
+  <parameter name="std_rx_word_aligner_pattern" value="0000000000" />
+  <parameter name="std_rx_word_aligner_pattern_len" value="7" />
+  <parameter name="std_rx_word_aligner_renumber" value="3" />
+  <parameter name="std_rx_word_aligner_rgnumber" value="3" />
+  <parameter name="std_rx_word_aligner_rknumber" value="3" />
+  <parameter name="std_tx_8b10b_disp_ctrl_enable" value="0" />
+  <parameter name="std_tx_8b10b_enable" value="0" />
+  <parameter name="std_tx_bitrev_enable" value="0" />
+  <parameter name="std_tx_bitslip_enable" value="0" />
+  <parameter name="std_tx_byte_ser_enable" value="0" />
+  <parameter name="std_tx_byterev_enable" value="0" />
+  <parameter name="std_tx_pcfifo_mode" value="low_latency" />
+  <parameter name="std_tx_polinv_enable" value="0" />
+  <parameter name="teng_pcs_pma_width" value="40" />
+  <parameter name="teng_pld_pcs_width" value="40" />
+  <parameter name="teng_protocol_hint" value="basic" />
+  <parameter name="teng_rx_bitslip_enable" value="0" />
+  <parameter name="teng_rx_frmsync_user_length" value="2048" />
+  <parameter name="teng_rx_polinv_enable" value="0" />
+  <parameter name="teng_rxfifo_align_del" value="0" />
+  <parameter name="teng_rxfifo_control_del" value="0" />
+  <parameter name="teng_rxfifo_empty" value="0" />
+  <parameter name="teng_rxfifo_full" value="31" />
+  <parameter name="teng_rxfifo_mode" value="phase_comp" />
+  <parameter name="teng_rxfifo_pempty" value="2" />
+  <parameter name="teng_rxfifo_pfull" value="23" />
+  <parameter name="teng_tx_bitslip_enable" value="0" />
+  <parameter name="teng_tx_frmgen_burst_enable" value="0" />
+  <parameter name="teng_tx_frmgen_user_length" value="2048" />
+  <parameter name="teng_tx_polinv_enable" value="0" />
+  <parameter name="teng_tx_scram_user_seed" value="000000000000000" />
+  <parameter name="teng_tx_sh_err" value="0" />
+  <parameter name="teng_txfifo_empty" value="0" />
+  <parameter name="teng_txfifo_full" value="31" />
+  <parameter name="teng_txfifo_mode" value="phase_comp" />
+  <parameter name="teng_txfifo_pempty" value="2" />
+  <parameter name="teng_txfifo_pfull" value="23" />
+  <parameter name="tx_enable" value="1" />
+  <parameter name="tx_pma_clk_div" value="1" />
+ </module>
+ <module
+   name="xcvr_reset_control_tx"
+   kind="altera_xcvr_reset_control"
+   version="17.0"
+   enabled="1">
+  <parameter name="CHANNELS" value="1" />
+  <parameter name="PLLS" value="1" />
+  <parameter name="REDUCED_SIM_TIME" value="1" />
+  <parameter name="RX_ENABLE" value="0" />
+  <parameter name="RX_PER_CHANNEL" value="0" />
+  <parameter name="SYNCHRONIZE_PLL_RESET" value="0" />
+  <parameter name="SYNCHRONIZE_RESET" value="1" />
+  <parameter name="SYS_CLK_IN_MHZ" value="125" />
+  <parameter name="TX_ENABLE" value="1" />
+  <parameter name="TX_PER_CHANNEL" value="0" />
+  <parameter name="TX_PLL_ENABLE" value="0" />
+  <parameter name="T_PLL_LOCK_HYST" value="0" />
+  <parameter name="T_PLL_POWERDOWN" value="1000" />
+  <parameter name="T_RX_ANALOGRESET" value="40" />
+  <parameter name="T_RX_DIGITALRESET" value="4000" />
+  <parameter name="T_TX_ANALOGRESET" value="0" />
+  <parameter name="T_TX_DIGITALRESET" value="20" />
+  <parameter name="device_family" value="Arria V GZ" />
+  <parameter name="gui_pll_cal_busy" value="0" />
+  <parameter name="gui_rx_auto_reset" value="0" />
+  <parameter name="gui_split_interfaces" value="0" />
+  <parameter name="gui_tx_auto_reset" value="0" />
+ </module>
+ <connection
+   kind="conduit"
+   version="17.0"
+   start="xcvr_reset_control_tx.pll_locked"
+   end="xcvr_native_avgz_0.pll_locked">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.0"
+   start="xcvr_reset_control_tx.tx_analogreset"
+   end="xcvr_native_avgz_0.tx_analogreset">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.0"
+   start="xcvr_reset_control_tx.tx_cal_busy"
+   end="xcvr_native_avgz_0.tx_cal_busy">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.0"
+   start="xcvr_reset_control_tx.tx_digitalreset"
+   end="xcvr_native_avgz_0.tx_digitalreset">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>
