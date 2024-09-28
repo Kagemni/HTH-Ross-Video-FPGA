@@ -57,8 +57,8 @@ logic       alternate;
 int 			y, u, v;
 int			y1, u1, v1;
 int			y2, u2, v2;
-int			hCount, vCount;
-wire 			h_prev;
+logic[31:0]			hCount, vCount;
+reg 			h_prev, v_prev;
 
 initial begin
 	alternate = 1'b0;
@@ -67,7 +67,8 @@ initial begin
 	YUVfromRGB(0, 255, 0, y2, u2, v2);
 	hCount <= 0;
 	vCount <= 0;
-	h_prev <= 0;
+	h_prev <= fvht_i[1];
+	v_prev <= fvht_i[2];
 end
 
 always @(posedge clk_i) begin
@@ -76,10 +77,12 @@ always @(posedge clk_i) begin
 			if (h_prev == 1'b1 && fvht_i[1] == 1'b0) begin //check when newline begins (negative edge)
 				hCount <= 0;
 				vCount <= vCount + 1;
+			end else if (fvht_i[1] == 1'b0) begin //we are in viewable space
+				hCount <= hCount + 1;
 			end
 			
-			if (fvht_i[1] == 1'b0) begin //we are in viewable space
-				hCount <= hCount + 1;
+			if (v_prev == 1'b0 && fvht_i[2] == 1'b1) begin //check when we start at top again (rising edge)
+				vCount <= 0;
 			end
 	 
 			//draw
@@ -93,8 +96,7 @@ always @(posedge clk_i) begin
 				if (vCount > 500) begin //DRAW Y
 					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y2, u2, v2, 1'b0);
 				end
-				
-				alternate = 1'b0;
+			
 			end else begin
 				if (hCount < 900) begin //DRAW X
 					vid_d1  <= (vid_sel_i)? vdat_colour_i : YUVtoData(y, u, v, 1'b1);
@@ -106,11 +108,11 @@ always @(posedge clk_i) begin
 					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y2, u2, v2, 1'b0);
 				end
 					
-				alternate <= 1'b1;
 			end
 		
 		 h_prev <= fvht_i[1];
        fvht_d1 <= fvht_i;
+		 alternate <= (h_prev == 1'b1 && fvht_i[1] == 1'b0) ? 0 : ~alternate;
     end
 end
 
