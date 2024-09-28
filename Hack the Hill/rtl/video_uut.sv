@@ -63,8 +63,8 @@ reg 			h_prev, v_prev;
 initial begin
 	alternate = 1'b0;
 	YUVfromRGB(255, 0, 0, y, u, v);
-	YUVfromRGB(0, 0, 255, y1, u1, v1);
-	YUVfromRGB(0, 255, 0, y2, u2, v2);
+	YUVfromRGB(0, 255, 0, y1, u1, v1);
+	YUVfromRGB(0, 0, 255, y2, u2, v2);
 	hCount <= 0;
 	vCount <= 0;
 	h_prev <= fvht_i[1];
@@ -74,45 +74,33 @@ end
 always @(posedge clk_i) begin
     if(cen_i) begin
 	 
-			if (h_prev == 1'b1 && fvht_i[1] == 1'b0) begin //check when newline begins (negative edge)
-				hCount <= 0;
-				vCount <= vCount + 1;
-			end else if (fvht_i[1] == 1'b0) begin //we are in viewable space
-				hCount <= hCount + 1;
-			end
-			
-			if (v_prev == 1'b0 && fvht_i[2] == 1'b1) begin //check when we start at top again (rising edge)
-				vCount <= 0;
-			end
-	 
-			//draw
-			if (alternate) begin
-				if (hCount < 900) begin //DRAW X
-					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y, u, v, 1'b0);
-				end else begin
-					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y1, u1, v1, 1'b0);
-				end
+        if (h_prev == 1'b1 && fvht_i[1] == 1'b0) begin //check when newline begins (negative edge)
+            hCount <= 0;
+            vCount <= vCount + 1;
+        end else if (fvht_i[1] == 1'b0) begin //we are in viewable space
+            hCount <= hCount + 1;
+        end
+        
+        if (v_prev == 1'b0 && fvht_i[2] == 1'b1) begin //check when we start at top again (rising edge)
+            vCount <= 0;
+        end
+    
+        //draw within bounds
+        if (hCount <= 1919) begin
 				
-				if (vCount > 500) begin //DRAW Y
-					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y2, u2, v2, 1'b0);
-				end
-			
-			end else begin
-				if (hCount < 900) begin //DRAW X
-					vid_d1  <= (vid_sel_i)? vdat_colour_i : YUVtoData(y, u, v, 1'b1);
-				end else begin
-					vid_d1  <= (vid_sel_i)? vdat_colour_i : YUVtoData(y1, u1, v1, 1'b1);
-				end
-				
-				if (vCount > 500) begin //DRAW Y
-					vid_d1  <= (vid_sel_i)? vdat_bars_i : YUVtoData(y2, u2, v2, 1'b0);
-				end
-					
-			end
-		
-		 h_prev <= fvht_i[1];
-       fvht_d1 <= fvht_i;
-		 alternate <= (h_prev == 1'b1 && fvht_i[1] == 1'b0) ? 0 : ~alternate;
+             if (hCount < 900 && vCount <= 500) begin
+                 vid_d1  <= YUVtoData(y, u, v, alternate);
+             end else if (hCount >= 900 && vCount <= 500) begin
+                 vid_d1  <= YUVtoData(y1, u1, v1, alternate);
+             end else if (vCount > 500) begin
+                 vid_d1  <= YUVtoData(y2, u2, v2, alternate);
+             end
+            
+        end
+            
+		  h_prev <= fvht_i[1];
+        fvht_d1 <= fvht_i;
+		  alternate <= (h_prev == 1'b1 && fvht_i[1] == 1'b0) ? 0 : ~alternate;
     end
 end
 
