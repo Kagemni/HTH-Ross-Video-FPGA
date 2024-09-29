@@ -38,34 +38,21 @@ endfunction
 
 function logic [19:0] YUVtoData(input int Y_i, input int U_i, input int V_i, input bit display_U);
     logic [9:0] Y;
-    logic [9:0] U, V;
+    logic [4:0] U, V;
     
     Y = (Y_i);
     U = (U_i);
     V = (V_i);
 	 
-	 if (display_U) begin
-			return {Y, U};
-	 end else begin
-			return {Y, V};
-	 end
+	 //if (display_U) begin
+	//		return {Y, U};
+	 //end else begin
+	//		return {Y, V};
+	 //end
+	 return {Y[9], U[4], Y[8], V[4], Y[7], U[3], Y[6], V[3], Y[5], U[2], Y[4], V[2], Y[3], U[1], Y[2], V[1], Y[1], U[0], Y[0], V[0]};
 endfunction
 
-function void fill_pixel(
-    input  int X,          // Horizontal pixel coordinate
-    input  int Y,          // Vertical pixel coordinate
-    input  int granularity,// Granularity input
-	 input  logic[31:0] hCount,
-	 input  logic[31:0] vCount,
-	 input  logic [19:0]  col_data, //video input (colour info for pixel)
-	 output logic [19:0]  vid_d1
-);
-	 if (get_bounds(X, Y, granularity, hCount, vCount) == 1) begin //in bounds
-			vid_d1 = col_data;
-	 end
-endfunction
-
-function bit get_bounds(
+function bit in_bounds(
     input  int X,          // Horizontal pixel coordinate
     input  int Y,          // Vertical pixel coordinate
     input  int granularity,// Granularity input
@@ -75,6 +62,8 @@ function bit get_bounds(
     // Parameters for aspect ratio
     parameter int aspect_ratio_x = 16;
     parameter int aspect_ratio_y = 9;
+	 parameter int x_dim = 1920;
+	 parameter int y_dim = 1080;
 
     // Rectangle dimensions based on granularity
     int rect_width;                 // Width of each rectangle
@@ -87,23 +76,23 @@ function bit get_bounds(
 
     // Ensure granularity is at least 1 to avoid division by zero
     if (granularity < 1) begin
-			granularity = 0;
+			granularity = 1;
 	 end
 
     // Calculate rectangle dimensions
-    rect_width  = aspect_ratio_x;
-    rect_height = aspect_ratio_y;
+    rect_width  = x_dim / (aspect_ratio_x * granularity);
+    rect_height = y_dim / (aspect_ratio_y * granularity);
 
     // Calculate Hstart, Hend, Vstart, and Vend based on input coordinates
-    Hstart = X - (X % rect_width);         // Horizontal start of the rectangle
+    Hstart = X * rect_width;         // Horizontal start of the rectangle
     Hend   = Hstart + rect_width;          // Horizontal end of the rectangle
-    Vstart = Y - (Y % rect_height);        // Vertical start of the rectangle
+    Vstart = Y * rect_height;        // Vertical start of the rectangle
     Vend   = Vstart + rect_height;         // Vertical end of the rectangle
 
-    if (hCount >= Hstart && hCount <= Hend && vCount >= Vstart && vCount <= Vend) begin
-			return 1; //in bounds
+    if (hCount >= Hstart && hCount < Hend && vCount >= Vstart && vCount < Vend) begin
+			return 1'b1; //in bounds
 	 end else begin
-			return 0; //not in bounds
+			return 1'b0; //not in bounds
 	 end
 
 endfunction
@@ -117,6 +106,7 @@ logic       alternate;
 int 			y, u, v;
 int			y1, u1, v1;
 int			y2, u2, v2;
+int			y3, u3, v3;
 logic[31:0]			hCount, vCount;
 reg 			h_prev, v_prev;
 
@@ -128,6 +118,7 @@ initial begin
 	YUVfromRGB(255, 0, 0, y, u, v);
 	YUVfromRGB(0, 255, 0, y1, u1, v1);
 	YUVfromRGB(0, 0, 255, y2, u2, v2);
+	YUVfromRGB(0, 0, 0, y3, u3, v3);
 	hCount <= 0;
 	vCount <= 0;
 	h_prev <= fvht_i[1];
@@ -148,13 +139,21 @@ always @(posedge clk_i) begin
         if (v_prev == 1'b0 && fvht_i[2] == 1'b1) begin //check when we start at top again (rising edge)
             vCount <= 0;
         end
+		  
+		  //granularity <= vid_sel_i ? 2 : 1;
     
         //draw within bounds
         if (hCount <= 1919) begin
 				 
-				 fill_pixel(1, 1, 1, hCount, vCount, YUVtoData(y, u, v, alternate), vid_d1);
-				 fill_pixel(5, 2, 1, hCount, vCount, YUVtoData(y1, u1, v1, alternate), vid_d1);
-				 fill_pixel(15, 8, 1, hCount, vCount, YUVtoData(y2, u2, v2, alternate), vid_d1);
+				 if (in_bounds(0, 0, granularity, hCount, vCount)) begin
+						vid_d1 <= YUVtoData(y, u, v, alternate);
+				 end else if (in_bounds(1, 1, granularity, hCount, vCount)) begin
+						vid_d1 <= YUVtoData(y1, u1, v1, alternate);
+				 end else if (in_bounds(15, 8, granularity, hCount, vCount)) begin
+						vid_d1 <= YUVtoData(y2, u2, v2, alternate);
+				 end else begin
+						vid_d1 <= YUVtoData(y1, u1, v1, alternate);
+				 end
             
         end
 		  
