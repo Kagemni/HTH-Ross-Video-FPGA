@@ -60,6 +60,8 @@ int			y2, u2, v2;
 logic[31:0]			hCount, vCount;
 reg 			h_prev, v_prev;
 
+logic[10:0] yBorder;
+
 initial begin
 	alternate = 1'b0;
 	YUVfromRGB(255, 0, 0, y, u, v);
@@ -69,6 +71,7 @@ initial begin
 	vCount <= 0;
 	h_prev <= fvht_i[1];
 	v_prev <= fvht_i[2];
+	yBorder <= 0;
 end
 
 always @(posedge clk_i) begin
@@ -88,16 +91,25 @@ always @(posedge clk_i) begin
         //draw within bounds
         if (hCount <= 1919) begin
 				
-             if (hCount < 900 && vCount <= 500) begin
+             if (hCount < 900 && vCount <= yBorder) begin
                  vid_d1  <= YUVtoData(y, u, v, alternate);
-             end else if (hCount >= 900 && vCount <= 500) begin
+             end else if (hCount >= 900 && vCount <= yBorder) begin
                  vid_d1  <= YUVtoData(y1, u1, v1, alternate);
-             end else if (vCount > 500) begin
+             end else if (vCount > yBorder) begin
                  vid_d1  <= YUVtoData(y2, u2, v2, alternate);
              end
             
         end
-            
+		  
+	if (fvht_i[1] == 1'b1 && h_prev == 1'b0 && fvht_i[2] == 1'b0 && v_prev == 1'b1) begin //new frame	  
+		  if (yBorder == 1125) begin
+			yBorder <= 0;
+		  end else begin
+		   yBorder <= yBorder + 3;
+		  end
+   end
+	
+		  v_prev <= fvht_i[2];
 		  h_prev <= fvht_i[1];
         fvht_d1 <= fvht_i;
 		  alternate <= (h_prev == 1'b1 && fvht_i[1] == 1'b0) ? 0 : ~alternate;

@@ -589,14 +589,15 @@
     </signal_set>
     <position_info>
       <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="0"/>
-      <single attribute="data vertical scroll position" value="4"/>
+      <single attribute="data horizontal scroll position" value="990"/>
+      <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
-      <single attribute="setup vertical scroll position" value="0"/>
-      <single attribute="zoom level denominator" value="64"/>
-      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="setup vertical scroll position" value="2"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="2"/>
       <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="8380416"/>
+      <single attribute="zoom offset numerator" value="65472"/>
+      <multi attribute="timebars" size="2" value="3461,3730"/>
     </position_info>
   </instance>
   <mnemonics/>
