@@ -38,18 +38,19 @@ endfunction
 
 function logic [19:0] YUVtoData(input int Y_i, input int U_i, input int V_i, input bit display_U);
     logic [9:0] Y;
-    logic [4:0] U, V;
+    logic [9:0] U, V;
     
     Y = (Y_i);
     U = (U_i);
     V = (V_i);
 	 
-	 //if (display_U) begin
-	//		return {Y, U};
-	 //end else begin
-	//		return {Y, V};
-	 //end
-	 return {Y[9], U[4], Y[8], V[4], Y[7], U[3], Y[6], V[3], Y[5], U[2], Y[4], V[2], Y[3], U[1], Y[2], V[1], Y[1], U[0], Y[0], V[0]};
+	 if (display_U) begin
+			return {Y, U};
+	 end else begin
+			return {Y, V};
+	 end
+	 //return {Y[9], U[4], Y[8], V[4], Y[7], U[3], Y[6], V[3], Y[5], U[2], Y[4], V[2], Y[3], U[1], Y[2], V[1], Y[1], U[0], Y[0], V[0]};
+	 //return {Y, U, V};
 endfunction
 
 function bit in_bounds(
@@ -89,7 +90,7 @@ function bit in_bounds(
     Vstart = Y * rect_height;        // Vertical start of the rectangle
     Vend   = Vstart + rect_height;         // Vertical end of the rectangle
 
-    if (hCount >= Hstart && hCount < Hend && vCount >= Vstart && vCount < Vend) begin
+    if (hCount >= Hstart && hCount < Hend && vCount-46 >= Vstart && vCount-46 < Vend) begin
 			return 1'b1; //in bounds
 	 end else begin
 			return 1'b0; //not in bounds
@@ -111,7 +112,7 @@ logic[31:0]			hCount, vCount;
 reg 			h_prev, v_prev;
 
 //logic[10:0] yBorder;
-int granularity = 1;
+int granularity = 2;
 
 initial begin
 	alternate = 1'b0;
@@ -140,7 +141,7 @@ always @(posedge clk_i) begin
             vCount <= 0;
         end
 		  
-		  //granularity <= vid_sel_i ? 2 : 1;
+		  granularity <= vid_sel_i ? 3 : 2;
     
         //draw within bounds
         if (hCount <= 1919) begin
@@ -148,9 +149,13 @@ always @(posedge clk_i) begin
 				 if (in_bounds(0, 0, granularity, hCount, vCount)) begin
 						vid_d1 <= YUVtoData(y, u, v, alternate);
 				 end else if (in_bounds(1, 1, granularity, hCount, vCount)) begin
-						vid_d1 <= YUVtoData(y1, u1, v1, alternate);
-				 end else if (in_bounds(15, 8, granularity, hCount, vCount)) begin
 						vid_d1 <= YUVtoData(y2, u2, v2, alternate);
+				 end else if (in_bounds(2, 2, granularity, hCount, vCount)) begin
+						vid_d1 <= YUVtoData(y, u, v, alternate);
+				 end else if (in_bounds(3, 3, granularity, hCount, vCount)) begin
+						vid_d1 <= YUVtoData(y2, u2, v2, alternate);
+				 end else if (in_bounds(15, 8, granularity, hCount, vCount)) begin
+						vid_d1 <= YUVtoData(y, u, v, alternate);
 				 end else begin
 						vid_d1 <= YUVtoData(y1, u1, v1, alternate);
 				 end
